@@ -2,6 +2,9 @@ body {
   margin: 0;
   font-family: "Nanum Myeongjo", serif;
 }
+h2 {
+  font-weight: 900;
+}
 input:focus {
   outline: none;
 }
@@ -100,6 +103,9 @@ textarea:focus {
 }
 .card-header {
   color: #3b3c45;
+}
+.card-header > h2 {
+  font-weight: 900;
 }
 .card-header > h2:hover {
   color: #4c89b5;
