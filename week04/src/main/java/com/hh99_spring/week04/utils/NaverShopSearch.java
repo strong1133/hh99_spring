@@ -33,11 +33,12 @@ public class NaverShopSearch {
         JSONObject rjson = new JSONObject(result);
         JSONArray items = rjson.getJSONArray("items");
         List<ItemDto> ret = new ArrayList<>();
-        for(int i=0; i<items.length(); i++){
-            JSONObject itemJson = items.getJSONObject(i);
-            ItemDto itemDto = new ItemDto(itemJson);
+        for (int i=0; i<items.length(); i++){
+            JSONObject jsonObject = items.getJSONObject(i);
+            ItemDto itemDto = new ItemDto(jsonObject);
             ret.add(itemDto);
         }
         return ret;
     }
+
 }
