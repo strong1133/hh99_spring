@@ -1,6 +1,14 @@
 body {
   margin: 0;
   font-family: "Nanum Myeongjo", serif;
+  cursor: default;
+}
+a {
+  text-decoration: none;
+  color: #3b3c45;
+}
+a:hover {
+  color: #4c89b5;
 }
 h2 {
   font-weight: 900;
@@ -89,6 +97,9 @@ textarea:focus {
   font-size: 18px;
   margin-bottom: 0px;
 }
+.contents__container-header > h2 > i {
+  cursor: pointer;
+}
 .contents__container-header > h2 > i:hover {
   color: #4c89b5;
 }
@@ -106,6 +117,7 @@ textarea:focus {
 }
 .card-header > h2 {
   font-weight: 900;
+  cursor: pointer;
 }
 .card-header > h2:hover {
   color: #4c89b5;
@@ -187,7 +199,7 @@ textarea:focus {
   width: 70px;
   border: 1px solid dimgray;
   border-radius: 7px;
-
+  cursor: pointer;
   background-color: #f7f7f7;
 }
 #save-btn {
