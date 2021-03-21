@@ -7,6 +7,8 @@ import com.hh99_spring.project01.service.ArticleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.soap.Detail;
+import java.util.ArrayList;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -18,6 +20,12 @@ public class ArticleRestController {
     @GetMapping("/api/articles")
     public List<Article> getArticle (){
         return articleRepository.findAll();
+    }
+
+    @GetMapping("/detail")
+    public String getDetail (@RequestParam(value = "id") Long id){
+        articleRepository.findById(id).orElseThrow(()->new IllegalArgumentException("null"));
+        return "/detail";
     }
 
     @PostMapping("/api/articles")

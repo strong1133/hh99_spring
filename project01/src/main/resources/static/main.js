@@ -54,15 +54,15 @@ function getArticle(){
         success: function (response){
             for(let i=0; i<response.length; i++){
                 let articles = response[i]
-                addArticle(articles['username'], articles['title'], articles['contents'], articles['modifiedAt'])
+                addArticle(articles['id'], articles['username'], articles['title'], articles['contents'], articles['modifiedAt'])
             }
         }
     })
 }
-function addArticle(username, title, contents, modifiedAt){
+function addArticle(id, username, title, contents, modifiedAt){
     let tempHtml = `<div class="card">
                     <div class="card-header">
-                        <a href="./detail.html" class="article-title"><h2>${title}</h2></a>
+                        <a href="'/detail?id='+${id}" class="article-title"><h2>${title}</h2></a>
                     </div>
                     <div class="card-body">
                         <p>
