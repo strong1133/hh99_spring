@@ -21,7 +21,7 @@ public class ArticleRestController {
 
     @GetMapping("/api/articles")
     public List<Article> getArticle() {
-        return articleRepository.findAll();
+        return articleRepository.findAllByOrderByModifiedAtDesc();
     }
 
     @RequestMapping(value = "/detail", method = RequestMethod.GET)
