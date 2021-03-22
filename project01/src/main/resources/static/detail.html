@@ -28,10 +28,35 @@
       </div>
       <div class="navbar">
         <i class="fas fa-home" id="home"></i>
-        <i class="fas fa-edit"></i>
+        <i class="fas fa-edit" id="edit"></i>
         <i class="fas fa-trash" id="delete"></i>
       </div>
       <div class="content__container">
+        <div class="detail__edit">
+          <div class="content-header">
+            <input
+              type="text"
+              class="detail-input"
+              placeholder="수정하실 제목을 적어주세요!"
+            />
+            <p class="post-author-edit">
+            </p>
+            <hr />
+          </div>
+          <div class="content-body">
+            <textarea
+              cols="30"
+              rows="10"
+              class="detail-textarea"
+              placeholder="수정하실 내용을 적어주세요!"
+            ></textarea>
+          </div>
+          <div class="content-footer">
+            <button class="edit-btn cancel">취소</button>
+            <button class="edit-btn edit" onclick="editArticle()">수정</button>
+          </div>
+        </div>
+      </div>
       <div class="footer">
         <a href="https://github.com/strong1133"
           ><i class="fab fa-github"></i
