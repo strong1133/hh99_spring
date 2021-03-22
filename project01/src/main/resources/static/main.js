@@ -62,7 +62,7 @@ function getArticle(){
 function addArticle(id, username, title, contents, modifiedAt){
     let tempHtml = `<div class="card">
                     <div class="card-header">
-                        <a href="'/detail?id='+${id}" class="article-title"><h2>${title}</h2></a>
+                        <a href="/detail?id=${JSON.stringify(id)}" class="article-title"><h2>${title}</h2></a>
                     </div>
                     <div class="card-body">
                         <p>
