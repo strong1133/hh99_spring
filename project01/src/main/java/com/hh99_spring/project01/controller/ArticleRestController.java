@@ -24,7 +24,8 @@ public class ArticleRestController {
         return articleRepository.findAllByOrderByModifiedAtDesc();
     }
 
-    @RequestMapping(value = "/detail", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/detail" , method = RequestMethod.GET)
     public ModelAndView detail() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("detail.html");
