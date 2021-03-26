@@ -1,7 +1,7 @@
 package com.hh99_spring.week01.controller;
 
-import com.hh99_spring.week01.domain.ItemDto;
-import com.hh99_spring.week01.domain.NaverShopSearch;
+import com.hh99_spring.week01.dto.ItemDto;
+import com.hh99_spring.week01.util.NaverShopSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

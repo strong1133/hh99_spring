@@ -1,5 +1,6 @@
 package com.hh99_spring.week01.domain;
 
+import com.hh99_spring.week01.dto.ProductRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -31,5 +32,9 @@ public class Product extends Timestamped {
         this.link = productRequestDto.getLink();
         this.lprice = productRequestDto.getLprice();
         this.myprice = 0;
+    }
+
+    public void updateMyprice(int myPrice) {
+        this.myprice=myPrice;
     }
 }

@@ -1,5 +1,6 @@
-package com.hh99_spring.week01.domain;
+package com.hh99_spring.week01.util;
 
+import com.hh99_spring.week01.dto.ItemDto;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.http.*;

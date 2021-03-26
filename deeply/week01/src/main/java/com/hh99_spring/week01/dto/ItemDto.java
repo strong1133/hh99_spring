@@ -1,4 +1,4 @@
-package com.hh99_spring.week01.domain;
+package com.hh99_spring.week01.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
