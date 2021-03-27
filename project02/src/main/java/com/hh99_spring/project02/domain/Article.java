@@ -1,5 +1,6 @@
-package com.hh99_spring.project01.domain;
+package com.hh99_spring.project02.domain;
 
+import com.hh99_spring.project02.dto.AritcleRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

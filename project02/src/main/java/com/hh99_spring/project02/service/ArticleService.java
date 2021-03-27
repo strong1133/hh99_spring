@@ -1,8 +1,9 @@
-package com.hh99_spring.project01.service;
+package com.hh99_spring.project02.service;
 
-import com.hh99_spring.project01.domain.AritcleRequestDto;
-import com.hh99_spring.project01.domain.Article;
-import com.hh99_spring.project01.domain.ArticleRepository;
+
+import com.hh99_spring.project02.dto.AritcleRequestDto;
+import com.hh99_spring.project02.domain.Article;
+import com.hh99_spring.project02.repository.ArticleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

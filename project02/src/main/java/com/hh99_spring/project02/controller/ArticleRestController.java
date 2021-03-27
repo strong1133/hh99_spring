@@ -1,16 +1,14 @@
-package com.hh99_spring.project01.controller;
+package com.hh99_spring.project02.controller;
 
-import com.hh99_spring.project01.domain.AritcleRequestDto;
-import com.hh99_spring.project01.domain.Article;
-import com.hh99_spring.project01.domain.ArticleRepository;
-import com.hh99_spring.project01.service.ArticleService;
+
+import com.hh99_spring.project02.dto.AritcleRequestDto;
+import com.hh99_spring.project02.domain.Article;
+import com.hh99_spring.project02.repository.ArticleRepository;
+import com.hh99_spring.project02.service.ArticleService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.xml.soap.Detail;
-import java.util.ArrayList;
 import java.util.List;
 
 @RequiredArgsConstructor

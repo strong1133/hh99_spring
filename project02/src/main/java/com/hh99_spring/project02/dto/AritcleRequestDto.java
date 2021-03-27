@@ -1,4 +1,4 @@
-package com.hh99_spring.project01.domain;
+package com.hh99_spring.project02.dto;
 
 import lombok.Getter;
 
