@@ -33,6 +33,7 @@
 
     <form action="/user/signup" method="post">
         <div class="login-id-label">Username</div>
+        <div th:if="${message}=='중복'" class="alert alert-danger" role="alert">이미 사용중인 아이디입니다.</div>
         <input type="text" name="username" placeholder="Username" class="login-input-box">
         <div class="login-id-label">Password</div>
         <input type="password" name="password" class="login-input-box">
@@ -42,6 +43,7 @@
 
         <div>
             <input id="admin-check" type="checkbox" name="admin" onclick="onclickAdmin()" style="margin-top: 40px;">관리자
+            <div th:if="${message} =='암호오류'" class="alert alert-danger" role="alert">관리자 암호가 잘못되었습니다.</div>
             <input id="admin-token" type="password" name="adminToken" placeholder="관리자 암호" class="login-input-box" style="display:none">
         </div>
         <button id="login-id-submit">회원 가입</button>
