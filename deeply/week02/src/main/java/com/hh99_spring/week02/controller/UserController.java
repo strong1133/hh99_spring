@@ -37,7 +37,7 @@ public class UserController {
         return "signup";
     }
 
-    // 회원 가입 요청 처리
+    // 회원 가입 요청 처리 & 중복및 오류체크
     @PostMapping("/user/signup")
     public String registerUser(SignupRequestDto requestDto, Model model) {
         try {
@@ -47,17 +47,9 @@ public class UserController {
             model.addAttribute("message", e.getMessage());
             return "signup";
         }
-
         return "redirect:/";
     }
 
-
-    // 회원 가입 에러
-    @GetMapping("/user/signup/error")
-    public String signupError(Model model) {
-        model.addAttribute("signupError", true);
-        return "signup";
-    }
 
 
     //관리자외 접근 방지
