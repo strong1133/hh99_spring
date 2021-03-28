@@ -12,7 +12,6 @@ body {
 }
 .login-container {
   margin: auto;
-  display: none;
 }
 .signup-container {
   margin: auto;
@@ -53,6 +52,7 @@ body {
   border-radius: 5px;
   background-color: #fff;
   box-sizing: border-box;
+  margin-top: 5px;
 }
 .form__inputs > input {
   border: none;
@@ -69,8 +69,8 @@ body {
   border: none;
   border-radius: 3px;
   color: white;
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 18px;
 }
 #id {
   border-bottom: 0.5px solid #ddd;
@@ -118,6 +118,7 @@ body {
   text-decoration: none;
   color: white;
   text-decoration: underline;
+  cursor: pointer;
 }
 .signup__inputs {
   display: flex;
@@ -173,4 +174,14 @@ body {
 #cancel-btn:hover {
   background-color: salmon;
   transition: all 200ms ease;
+}
+.alert {
+  background-color: salmon;
+  color: white;
+  width: 250px;
+  text-align: center;
+  margin: auto;
+  padding: 3px;
+  margin-top: -10px;
+  border-radius: 5px;
 }
