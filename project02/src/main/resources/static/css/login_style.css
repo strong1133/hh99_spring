@@ -136,6 +136,16 @@ body {
   text-align: left;
   font-weight: 650;
   padding: 5px;
+  position: relative;
+}
+.label-valid {
+  top: 30px;
+  text-align: right;
+  color: whitesmoke;
+  position: relative;
+  padding: 5px;
+  font-size: 10px;
+  font-weight: 550;
 }
 .signup__inputs > input {
   border: none;
@@ -153,8 +163,8 @@ body {
   border: none;
   border-radius: 3px;
   height: 36px;
-  margin-bottom: 10px;
-  background-color: #212121;
+  margin: 13px 0 -5px 0;
+  background-color: #1e2330;
 
   color: white;
 }
@@ -178,10 +188,11 @@ body {
 .alert {
   background-color: salmon;
   color: white;
-  width: 250px;
+  width: 260px;
   text-align: center;
   margin: auto;
   padding: 3px;
   margin-top: -10px;
+  margin-bottom: 5px;
   border-radius: 5px;
 }
