@@ -69,7 +69,7 @@ textarea:focus {
   position: absolute;
   bottom: 0;
   height: 30px;
-  width: 80%;
+  width: 77%;
   display: flex;
   justify-content: space-between;
   color: white;
@@ -153,6 +153,22 @@ textarea:focus {
   /* border: 1px solid black; */
   padding: 20px;
 }
+.fa-sign-out-alt:before {
+  display: none;
+}
+.fa-sign-out-alt:after {
+  content: "\f2f5";
+  margin-left: 7px;
+}
+.fa-sign-out-alt:hover {
+  color: #4c89b5;
+  transition: all 200ms ease;
+}
+.fas {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  font-size: 19px;
+}
 
 .input-title {
   border: none;
@@ -161,7 +177,7 @@ textarea:focus {
   height: 50px;
   font-size: 30px;
 }
-.input-name {
+.cur_username {
   border: none;
   background-color: #f7f7f7;
   width: 160px;
@@ -175,7 +191,7 @@ textarea:focus {
 
 .posting-textarea {
   width: 100%;
-  height: 400px;
+  height: 350px;
   background-color: #f7f7f7;
   border: none;
   border-bottom: 1px solid dimgray;
@@ -189,7 +205,6 @@ textarea:focus {
   margin: 30px;
   display: flex;
   text-align: right;
-  align-items: right;
   padding: 30px;
 }
 
@@ -212,4 +227,21 @@ textarea:focus {
 }
 #cancel-btn:hover {
   background-color: #4c89b5;
+}
+.show_username {
+  position: absolute;
+  text-align: center;
+  top: 57%;
+  width: 100%;
+  height: 100px;
+  color: floralwhite;
+  font-weight: 600;
+}
+.link-signup {
+  text-decoration: none;
+  color: midnightblue;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 10px;
+  line-height: 40px;
 }

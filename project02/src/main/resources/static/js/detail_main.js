@@ -3,11 +3,14 @@ $(document).ready(function () {
     getId()
     showHide()
     deleteArticle()
+    $('.comment__card-box').empty();
+
 })
 
 function getId() {
     let id = location.search.split('=')[1]
-    return getDetail(id)
+    getDetail(id)
+    getComment(id)
 }
 
 function backHome() {
@@ -102,4 +105,64 @@ function deleteArticle() {
             }
         })
     })
+}
+
+function create_comment() {
+    let article_id = location.search.split('=')[1]
+    let username = $('.username').text();
+    let contents = $('.post__comment-textarea').val();
+    if (!username || $('.link-signup').text() == '로그인 하러 가기') {
+        alert("로그인을 하셔야 댓글을 달수 있습니다!")
+        return;
+    }
+    if (contents == '') {
+        alert("댓글을 적어주세요!!")
+        return
+    }
+    let data = {'article_id':article_id, 'username':username, 'contents':contents};
+
+    $.ajax({
+        type:'POST',
+        url:'/api/comments',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        success: function (response){
+            alert('댓글이 성공적으로 작성되었습니다!')
+            window.location.reload();
+        }
+
+    })
+}
+
+
+function getComment(id) {
+    let index = id
+    $.ajax({
+        type: 'GET',
+        url: `/api/comment/${index}`,
+        success: function (response) {
+            for(let i=0; i< response.length; i++){
+                console.log(response['comments'][i])
+                // let comment = response[i];
+                // let tempHtml = addComments(comment)
+                // $('.comment__card-box').append(tempHtml);
+            }
+        }
+    });
+}
+
+function addComments(comment){
+    return `<div class="comment__card">
+                <div class="comment__card-header">
+                  ${comment.username}<span class="comment-date">${comment.modifiedAt}</span>
+                </div>
+                <div class="comment__card-body">
+                  <div class="comment">${comment.contents}</div>
+                  <div class="comment-btn">
+                    <i class="far fa-edit"></i>
+                    <i class="fas fa-trash-alt"></i>
+                  </div>
+                </div>
+              </div>`;
+
 }

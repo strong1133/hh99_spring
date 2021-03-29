@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="KR">
+<html
+  lang="KR"
+  xmlns:th="http://www.thymeleaf.or"
+  xmlns="http://www.w3.org/1999/xhtml"
+>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="SJ의 스프링블로그">
-    <meta property="og:description" content="스프링부트의 CRUD구현 블로그">
-    <meta property="og:image" content="SJ_Main.png">
+    <meta property="og:title" content="SJ의 스프링블로그" />
+    <meta property="og:description" content="스프링부트의 CRUD구현 블로그" />
+    <meta property="og:image" content="SJ_Main.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
@@ -28,6 +32,13 @@
         <h1>스프링<br />게시판 만들기</h1>
         <div class="avartar_wrap">
           <img class="avartar" src="images/SJ_Main.png" alt="" />
+        </div>
+        <div class="show_username">
+          <div th:if="!${username}">
+            아직 회원이 아니시군요? <br />
+            <a href="/user/signup" class="link-signup">회원 가입하러 가기</a>
+          </div>
+          <div th:if="${username}"><div th:text="${username}" class="fas fa-sign-out-alt"></div></div>
         </div>
         <div class="left__container-footer">
           <i class="fas fa-home"></i>
@@ -76,11 +87,9 @@
         <div class="posting__contianer">
           <div class="posting__contianer__wrap">
             <div class="posting__contianer-title">
-              <input
+              <p
                 class="input-name"
-                type="text"
-                placeholder="이름을 입력하세요"
-              />
+              ><div th:if="${username}"><div class="cur_username" th:text="${username}"></div></div></p>
               <input
                 class="input-title"
                 type="text"

@@ -15,6 +15,7 @@ public class UserController {
 
     private final UserService userService;
 
+
     @GetMapping("/user/login")
     public String login(){return "login";}
 
@@ -37,6 +38,6 @@ public class UserController {
             model.addAttribute("message", e.getMessage());
             return "signup";
         }
-        return "redirect:/";
+        return "redirect:/user/login";
     }
 }

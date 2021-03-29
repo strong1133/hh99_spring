@@ -1,17 +1,15 @@
-package com.hh99_spring.week03.security;
+package com.hh99_spring.project02.security;
 
-
-import com.hh99_spring.week03.domain.User;
-import com.hh99_spring.week03.repository.UserRepository;
+import com.hh99_spring.project02.domain.User;
+import com.hh99_spring.project02.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService {
+public class UserDetailServiceImpl implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;

@@ -1,9 +1,11 @@
 package com.hh99_spring.project02.controller;
 
 
+import com.hh99_spring.project02.domain.Comment;
 import com.hh99_spring.project02.dto.AritcleRequestDto;
 import com.hh99_spring.project02.domain.Article;
 import com.hh99_spring.project02.repository.ArticleRepository;
+import com.hh99_spring.project02.repository.CommentRepository;
 import com.hh99_spring.project02.service.ArticleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @RequiredArgsConstructor
-@RestController("/")
+@RestController()
 public class ArticleRestController {
     private final ArticleService articleService;
     private final ArticleRepository articleRepository;
@@ -22,14 +24,6 @@ public class ArticleRestController {
         return articleRepository.findAllByOrderByModifiedAtDesc();
     }
 
-
-    @RequestMapping(value = "/detail", method = RequestMethod.GET)
-    public ModelAndView detail() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("detail.html");
-//        modelAndView.getModel();
-        return modelAndView;
-    }
 
 
     @GetMapping("/api/detail/{id}")

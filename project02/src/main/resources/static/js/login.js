@@ -1,7 +1,12 @@
 $(document).ready(function(){
-    
+    home()
 })
 
+function home(){
+    $('.login__title').on('click',function (){
+        window.location.href="/"
+    })
+}
 
 function blank_check(){
 

@@ -2,10 +2,23 @@ $(document).ready(function () {
     showHide()
     $('.card__container').empty()
     getArticle()
+    logout()
 })
+
+
+function logout(){
+    $('.fa-sign-out-alt').on('click',function(){
+        window.location.href="/user/logout"
+    })
+}
 
 function showHide() {
     $('#posting-pen').on('click', function () {
+        if ($('.link-signup').text() == "회원 가입하러 가기" ){
+            alert("게시물 작성을 위해선 로그인을 해야합니다.")
+            window.location.href="/user/login"
+            return;
+        }
         $('.contents__container').hide();
         $('.posting__contianer').show();
     })
@@ -21,7 +34,7 @@ function showHide() {
 }
 
 function postArticle() {
-    let username = $('.input-name').val()
+    let username = $('.cur_username').text()
     let title = $('.input-title').val()
     let contents = $('.posting-textarea').val()
     if (username == '') {

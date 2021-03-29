@@ -32,6 +32,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/user/**").permitAll()
                 //H2 콘솔 허용
                 .antMatchers("/h2-console/**").permitAll()
+                //비회원 게시물 전체 조회 허용
+                .antMatchers("/").permitAll()
+                .antMatchers("/api/articles").permitAll()
+                //댓글달기 허용
+                .antMatchers("/api/comments/**").permitAll()
+                //비회원 상세보기 허용
+                .antMatchers("/detail").permitAll()
+                .antMatchers("/api/detail/**").permitAll()
+                .antMatchers("/api/comment/**").permitAll()
                 // 그 외 모든 요청은 인증과정 필요
                 .anyRequest().authenticated()
                 .and()
@@ -39,10 +48,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/user/login")
                 .failureUrl("/user/login/error")
                 .loginProcessingUrl("/user/login")
-                .defaultSuccessUrl("/")
+//                .defaultSuccessUrl("/")
                 .permitAll()
                 .and()
                 .logout()
+                .logoutUrl("/user/logout").logoutSuccessUrl("/")
                 .permitAll();
     }
 

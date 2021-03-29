@@ -52,6 +52,7 @@ public class UserService {
             throw new IllegalArgumentException("emailValid");
         }
 
+         // 모든 조건 통과 및 암호화된 사용자 계정정보를 DB에 저장
         User user = new User(username, password, email);
         userRepository.save(user);
     }
