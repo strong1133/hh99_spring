@@ -26,10 +26,4 @@ public class CommentService {
 
     }
 
-    public Comment getComments(Long article_id){
-        return commentRepository.findById(article_id).orElseThrow(
-                ()-> new IllegalArgumentException("해당 아이디가 없습니다.")
-        );
-    }
-
 }

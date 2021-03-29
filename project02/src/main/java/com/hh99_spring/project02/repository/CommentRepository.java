@@ -2,10 +2,15 @@ package com.hh99_spring.project02.repository;
 
 import com.hh99_spring.project02.domain.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
-public interface CommentRepository extends JpaRepository<Comment, Long> {
+@Repository
+public interface CommentRepository extends JpaRepository<Comment, Long> , JpaSpecificationExecutor<Comment> {
     List<Comment> findAllByOrderByModifiedAtDesc();
-//    List<Comment> find(Long Article_id);
+//    Optional<Comment> findAllByArticle_id(Long article_id);
 }

@@ -29,7 +29,7 @@ public class HomeController {
             return "detail";
         }
         model.addAttribute("message","null" );
-        return "forbiden";
+        return "detail";
     }
 
     @GetMapping("/error")

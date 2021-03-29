@@ -4,6 +4,7 @@ import com.hh99_spring.project02.domain.Comment;
 import com.hh99_spring.project02.dto.CommentReqeustDto;
 import com.hh99_spring.project02.repository.CommentRepository;
 import com.hh99_spring.project02.service.CommentService;
+import com.hh99_spring.project02.util.CommentSpecs;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
@@ -23,11 +24,9 @@ public class CommentController {
     }
 
 
-    @GetMapping("/api/comment/{id}")
-    public Comment getComments(Long article_id){
-        return commentRepository.findById(article_id).orElseThrow(
-                ()-> new IllegalArgumentException("해당 아이디가 없습니다.")
-        );
+    @GetMapping("/api/comment/{article_id}")
+    public List<Comment> getComment(@PathVariable Long article_id){
+        return commentRepository.findAll(CommentSpecs.withArticle_id(article_id));
     }
 
 
