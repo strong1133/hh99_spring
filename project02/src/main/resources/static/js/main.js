@@ -1,13 +1,43 @@
 $(document).ready(function () {
     showHide()
     $('.card__container').empty()
-    getArticle()
-    logout()
+    getArticle();
+    logout();
+    goHome();
+    navBtn();
 })
 
+function goHome(){
+    $('.main-title').on('click',function (){
+        window.location.href="/"
+    })
+}
 
+function navBtn(){
+    $('.nav-git').on('click',function (){
+        window.location.href="https://github.com/strong1133"
+    })
+    $('.nav-pen').on('click',function (){
+        if ($('.link-signup').text() == "회원 가입하러 가기" ){
+            alert("게시물 작성을 위해선 로그인을 해야합니다.")
+            window.location.href="/user/login"
+            return;
+        }
+        $('.contents__container').hide();
+        $('.posting__contianer').show();
+    })
+    $('.nav-key').on('click',function (){
+        if ($('.link-signup').text() == "회원 가입하러 가기" ){
+            window.location.href="/login"
+            return;
+        }
+        alert('로그아웃 되었습니다. 감사합니다.')
+        window.location.href="/user/logout"
+    })
+}
 function logout(){
     $('.fa-sign-out-alt').on('click',function(){
+        alert('로그아웃 되었습니다. 감사합니다.')
         window.location.href="/user/logout"
     })
 }

@@ -12,6 +12,7 @@
     <meta property="og:description" content="스프링부트의 CRUD구현 블로그" />
     <meta property="og:image" content="SJ_Main.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -29,7 +30,7 @@
     <div class="wrap">
       <div class="left__container">
         <div class="left__mask"></div>
-        <h1>스프링<br />게시판 만들기</h1>
+        <h1 class="main-title">스프링<br />게시판 만들기</h1>
         <div class="avartar_wrap">
           <img class="avartar" src="images/SJ_Main.png" alt="" />
         </div>
@@ -41,10 +42,10 @@
           <div th:if="${username}"><div th:text="${username}" class="fas fa-sign-out-alt"></div></div>
         </div>
         <div class="left__container-footer">
-          <i class="fas fa-home"></i>
-          <i class="fas fa-pen"></i>
-          <i class="fas fa-book"></i>
-          <i class="fab fa-instagram"></i>
+          <i class="fas fa-key footer-btn nav-key"></i>
+          <i class="fas fa-pen footer-btn nav-pen" ></i>
+          <i class="fab fa-github footer-btn nav-git"></i>
+          <i class="fab fa-instagram footer-btn nav-insta"></i>
         </div>
       </div>
       <div class="right__container">

@@ -18,6 +18,13 @@ public class User extends Timestamped{
         this.email=email;
     }
 
+    public User(String username, String password, String email, Long kakaoId){
+        this.username = username;
+        this.password = password;
+        this.email=email;
+        this.kakaoId = kakaoId;
+    }
+
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private Long id;
@@ -31,4 +38,6 @@ public class User extends Timestamped{
     @Column(nullable = false)
     private String email;
 
+    @Column(nullable = true)
+    private Long kakaoId;
 }

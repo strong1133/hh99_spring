@@ -5,6 +5,9 @@ $(document).ready(function () {
     deleteArticle()
     $('.comment__card-box').empty();
 
+
+    let rn = Math.floor(Math.random() * 4) + 1;
+    $('.header').addClass('header'+ rn);
 })
 
 function getId() {

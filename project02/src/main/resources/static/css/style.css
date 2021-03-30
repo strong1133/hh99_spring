@@ -40,7 +40,9 @@ textarea:focus {
   text-align: center;
 }
 .left__container > h1 {
-  font-family: none;
+  font-family: 'Black Han Sans', sans-serif;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-weight: 10;
   position: absolute;
   top: 25%;
   color: white;
@@ -161,7 +163,7 @@ textarea:focus {
   margin-left: 7px;
 }
 .fa-sign-out-alt:hover {
-  color: #4c89b5;
+  color: midnightblue;
   transition: all 200ms ease;
 }
 .fas {
@@ -244,4 +246,14 @@ textarea:focus {
   cursor: pointer;
   margin-top: 10px;
   line-height: 40px;
+}
+.footer-btn{
+  cursor: pointer;
+}
+.footer-btn:hover{
+  color:midnightblue;
+  transition: all 200ms ease;
+}
+.main-title{
+  cursor: pointer;
 }

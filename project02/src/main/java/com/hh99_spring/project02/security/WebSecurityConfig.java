@@ -55,5 +55,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutUrl("/user/logout").logoutSuccessUrl("/")
                 .permitAll();
     }
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception{
+        return  super.authenticationManagerBean();
+    }
 
 }
