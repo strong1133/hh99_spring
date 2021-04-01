@@ -132,9 +132,6 @@
 <p align="center">
 <img src="https://github.com/strong1133/hh99_spring/blob/main/thumnail/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1.png?raw=true" width="100%"></img>
 </p>
-<p align="center">
-<img src="https://github.com치/strong1133/MyPL/blob/main/sample/mypl_responsive02.JPG?raw=true" width="90%"></img>
-</p>
 
 </br>
 
