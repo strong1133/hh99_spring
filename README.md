@@ -60,6 +60,7 @@
 - Spring Boot
 - JPA
 - RDB
+- Spring Security
 
 #### :orange_book: frontend
 
