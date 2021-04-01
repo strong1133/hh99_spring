@@ -18,10 +18,10 @@ public class CommentController {
     private final CommentRepository commentRepository;
     private final CommentService commentService;
 
-    @GetMapping("/api/comments")
-    public List<Comment> getComment(){
-        return commentRepository.findAllByOrderByModifiedAtDesc();
-    }
+//    @GetMapping("/api/comments")
+//    public List<Comment> getComment(){
+//        return commentRepository.findAllByOrderByModifiedAtDesc();
+//    }
 
 
     @GetMapping("/api/comment/{article_id}")

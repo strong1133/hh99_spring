@@ -6,7 +6,7 @@ import org.springframework.data.jpa.domain.Specification;
 public class CommentSpecs {
 
     public static Specification<Comment> withArticle_id(Long article_id) {
-        return (Specification<Comment>) ((root, query, builder) ->
+        return ((root, query, builder) ->
                 builder.equal(root.get("article_id"), article_id)
         );
     }

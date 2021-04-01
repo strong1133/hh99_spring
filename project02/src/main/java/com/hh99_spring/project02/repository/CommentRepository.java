@@ -11,6 +11,5 @@ import java.util.Optional;
 
 @Repository
 public interface CommentRepository extends JpaRepository<Comment, Long> , JpaSpecificationExecutor<Comment> {
-    List<Comment> findAllByOrderByModifiedAtDesc();
-//    Optional<Comment> findAllByArticle_id(Long article_id);
+//    List<Comment> findAllByOrderByModifiedAtDesc();
 }
