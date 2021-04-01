@@ -127,8 +127,6 @@
 
 </br>
 
-## :mag: 반응형
-
 #### :heavy_check_mark: 카카오톡 로그인
 
 <p align="center">
