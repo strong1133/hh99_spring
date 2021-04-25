@@ -1,7 +1,5 @@
 package com.hh99_spring.project02.util;
 
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.regex.Pattern;
 
